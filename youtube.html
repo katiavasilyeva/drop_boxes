@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ClothingDropBoxes</title>
+    <meta name = "description" content = "clothing map">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.13.1/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.13.1/mapbox-gl.css' rel='stylesheet' />
+    <script src='https://api.tiles.mapbox.com/mapbox.js/plugins/turf/v2.0.2/turf.min.js'></script>
+    <style>
+        body{
+            padding-top: 40px;
+
+        }
+        #map { position:absolute; top:22.5%; bottom:0%; width:80%; }
+    </style>
+
+</head>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v1.1.0/mapbox-gl-geocoder.js'></script>
+<link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v1.1.0/mapbox-gl-geocoder.css' type='text/css' />
+    <nav class = "navbar navbar-inverse navbar-fixed-top" id="my-navbar">
+        <div class = "container">
+            <div class="navbar-header">
+                <button type = "button" class ="navbar-toggle" data-toggle="collapse" data-target = "#navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="" class="navbar-brand">Clothing Drop Boxes</a>
+
+            </div>
+            <div class = "collapse navbar-collapse" id="navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href ="#map">Map</a>
+                    <li><a href ="#about">About</a>
+                    <li><a href ="#contact">Contact</a>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class = "jumbotron">
+        <div class="container text-center">
+            <h1>Cothing Drop Boxes</h1>
+            <p>This is my cool map</p>
+            </div>
+        </div>
+    <div class="container">
+        <section>
+            <div class="page-header" id="map">
+                <h2>View the map</h2>
+            </div>
+        </section>
+    </div>
+    <div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div id="map">
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <section>
+            <div class="page-header" id="about">
+                <h2>About</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg">
+                    <blockquote>
+                        <p>heyyheyeheyeheyhey</p>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="well">
+    <div class="container">
+        <section>
+            <div class="page-header" id="contact">
+                <h2>Contact Us</h2>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <p>
+                        let us know if any drop-boxes are missing or if you have any questions!
+                    </p>
+                </div>
+                <div class="col-lg-8">
+                    <form action="" class="form-horizontal">
+                        <div class="form-group">
+                            <label for="username" class="col-lg-2 control-label">Name
+                            </label>
+                            <div class="col-lg-10">
+                                <input type="type" class="form-control" id="username" placeholder="Enter your name">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="col-lg-2 control-label">Email
+                            </label>
+                            <div class="col-lg-10">
+                                <input type="type" class="form-control" id="email" placeholder="Enter your email address">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="col-lg-2 control-label">Message
+                            </label>
+                            <div class="col-lg-10">
+                                <textarea name="message" id="message" class="form-control"
+                                          cols="20" rows="10" placeholder="Type your message here..."></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-lg-10">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </div>
+    </div>
+    <footer>
+        <div class="container text-center">
+            <p>  © Katia Vasilyeva 2016</p>
+            <br>
+        </div>
+
+
+    </footer>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src='./drop_boxes.js'></script>
+</body>
+</html>
